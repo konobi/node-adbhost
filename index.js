@@ -1,7 +1,7 @@
 var AdbHostClient = require('./lib/client.js');
 
-function createConnection(opts) {
-  return new AdbHostClient(opts);
+function createConnection(opts, cb) {
+  return new AdbHostClient(opts, cb);
 }
 
 module.exports.createConnection = createConnection;
