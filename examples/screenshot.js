@@ -3,8 +3,8 @@
 
 require('../index.js')
    .createConnection({ usb: true}, function(adb){
-      var src = adb.createStream('framebuffer:');
       var dst = require('fs').createWriteStream('foo.jpg');
+      var src = adb.createStream('framebuffer:');
 
       src.pipe(dst);
    });
